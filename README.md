@@ -105,4 +105,4 @@ If you want to help, a good first pass is:
 
 ## License
 
-Add a license file before wider collaboration if you plan to make the repo fully open and reusable.
+This project is licensed under the [MIT License](./LICENSE).
