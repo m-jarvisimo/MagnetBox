@@ -1,0 +1,11 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Runtime data generated on the server
+/data/
+/logs/
+
+# Local virtualenvs
+.venv/
+venv/

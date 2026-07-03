@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MagnetBox History</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="card wide">
+      <div class="page-head">
+        <div>
+          <h1>Job History</h1>
+          <p class="muted">Signed in as {{username}}</p>
+        </div>
+        <form method="post" action="/logout">
+          <button type="submit" class="secondary">Log out</button>
+        </form>
+      </div>
+      <nav class="page-nav">
+        <a href="/submit">Submit</a>
+        <a href="/history">History</a>
+      </nav>
+      <table>
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Magnet</th>
+            <th>By</th>
+            <th>Status</th>
+            <th>Created</th>
+            <th>Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{rows_html}}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

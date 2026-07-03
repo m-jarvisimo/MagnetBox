@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MagnetBox Submit</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="card">
+      <div class="page-head">
+        <div>
+          <h1>Submit Magnet</h1>
+          <p class="muted">Signed in as {{username}}</p>
+        </div>
+        <form method="post" action="/logout">
+          <button type="submit" class="secondary">Log out</button>
+        </form>
+      </div>
+      <nav class="page-nav">
+        <a href="/submit">Submit</a>
+        <a href="/history">History</a>
+      </nav>
+      {{error_html}}
+      {{message_html}}
+      <form method="post" action="/submit" class="stack">
+        <label>
+          <span>Magnet URI</span>
+          <textarea name="magnet_uri" rows="7" placeholder="magnet:?xt=urn:btih:..." required></textarea>
+        </label>
+        <button type="submit">Queue job</button>
+      </form>
+    </main>
+  </body>
+</html>
